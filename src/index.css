@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Medical Professional Color Scheme */
+    --background: 210 25% 98%;
+    --foreground: 220 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    /* Medical Blue - Primary Brand */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 92%;
+    --primary-glow: 210 100% 55%;
+
+    /* Clinical Secondary */
+    --secondary: 195 100% 96%;
+    --secondary-foreground: 210 100% 35%;
+
+    /* Muted Backgrounds */
+    --muted: 210 25% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent Teal */
+    --accent: 180 100% 40%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 180 100% 95%;
+
+    /* Warning/Risk Colors */
+    --warning: 40 95% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --high-risk: 0 85% 55%;
+    --high-risk-foreground: 0 0% 100%;
+    
+    --medium-risk: 30 90% 55%;
+    --medium-risk-foreground: 0 0% 100%;
+    
+    --low-risk: 140 70% 45%;
+    --low-risk-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 25% 88%;
+    --input: 210 25% 90%;
+    --ring: 210 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 45%), hsl(210 100% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(180 100% 40%), hsl(195 100% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210 25% 98%), hsl(210 25% 95%));
+    
+    --shadow-soft: 0 2px 8px hsl(210 25% 80% / 0.15);
+    --shadow-medium: 0 4px 16px hsl(210 25% 70% / 0.2);
+    --shadow-elevated: 0 8px 24px hsl(210 25% 60% / 0.25);
+    --shadow-glow: 0 0 24px hsl(210 100% 55% / 0.15);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.15s ease-out;
+  }
+
+  .dark {
+    --background: 220 20% 12%;
+    --foreground: 210 25% 95%;
+
+    --card: 220 20% 15%;
+    --card-foreground: 210 25% 95%;
+
+    --popover: 220 20% 15%;
+    --popover-foreground: 210 25% 95%;
+
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 25%;
+    --primary-glow: 210 100% 65%;
+
+    --secondary: 195 50% 20%;
+    --secondary-foreground: 195 100% 85%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 180 90% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 180 50% 20%;
+
+    --warning: 40 95% 55%;
+    --warning-foreground: 0 0% 100%;
+    
+    --high-risk: 0 85% 60%;
+    --high-risk-foreground: 0 0% 100%;
+    
+    --medium-risk: 30 90% 60%;
+    --medium-risk-foreground: 0 0% 100%;
+    
+    --low-risk: 140 70% 50%;
+    --low-risk-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 22%;
+    --input: 220 20% 20%;
+    --ring: 210 100% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 45%), hsl(210 100% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(180 90% 40%), hsl(195 80% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 20% 12%), hsl(220 20% 15%));
+    
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-elevated: 0 8px 24px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 24px hsl(210 100% 55% / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
